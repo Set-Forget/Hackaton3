@@ -20,7 +20,6 @@ const ProductsPage = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch("/api/products"); 
-      console.log(response)
         if (!response.ok) throw new Error("Failed to fetch products");
         const data: Product[] = await response.json();
         setProducts(data);
